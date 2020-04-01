@@ -1,0 +1,18 @@
+server:
+  port: 8001
+
+#配置eureka 注册服务
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/
+  instance:
+    instance-id: paymentHystrix8001
+    # 开启Ip显示
+    prefer-ip-address: true
+
+spring:
+  application:
+    name: cloud-provider-hystrix-payment

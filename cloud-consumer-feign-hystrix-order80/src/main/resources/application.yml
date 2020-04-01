@@ -1,0 +1,18 @@
+server:
+  port: 80
+
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/
+ribbon:
+  ConnectTimeout: 5000
+  #禁用eureka
+  #eureka:
+    #enabled: true
+
+#开启客服端服务降级
+feign:
+  hystrix:
+    enabled: true
